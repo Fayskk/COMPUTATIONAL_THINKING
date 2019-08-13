@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class Ex06 {
+
+	public static void main(String[] args) {
+		int codProduto[] = new int [5];
+		String nomeProduto[] = new String [5];
+		String nomeLoja[] = new String [6];
+		float m [][] = new float [1][6];
+		
+		Scanner scn = new Scanner(System.in);
+		
+		System.out.println("Digite o código do produto: ");
+		for (int i = 0; i < 5; i++) {
+			codProduto[i] = scn.nextInt();
+			
+			System.out.println("Digite o nome do produto: ");
+			for (int ii = 0; ii < 5; ii++) {
+				nomeProduto[i] = scn.toString();
+				
+				System.out.println("Digite o nome da loja: ");
+				for (int iii = 0; iii < 6; iii++) {
+					nomeLoja[i] = scn.toString();
+					
+					System.out.println("Digite o valor do produto: ");		
+					for (int iiii = 0; iiii < 1; iiii++) {
+						for (int j = 0; j < 6; j++) {
+							m[i][j] = scn.nextFloat();
+						}
+					}
+				}
+				
+			}
+			
+		}
+		
+		
+		System.out.println("Valor de todos os Produtos: ");
+		
+		for (int i = 0; i < 1; i++) {
+			for (int j = 0; j <6; j++) {
+				System.out.println("\t" + m[i][j]);
+			}
+			System.out.println(" ");
+		}
+		
+		scn.close();
+	}
+		
+}

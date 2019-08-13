@@ -1,0 +1,68 @@
+import java.util.Scanner;
+
+public class Ex06 {
+
+	public static void main(String[] args) {
+		int codProduto[] = new int [5];
+		String nomeProduto[] = new String [5];
+		String nomeLoja[] = new String [6];
+		float m [][] = new float [5][6];
+		double menorPreco[] = new double[5];
+		String menorLoja [] = new String [5];
+		
+		Scanner scn = new Scanner(System.in);
+		
+		System.out.println("Digite o código de 5 produtos: ");
+		for (int i = 0; i < 5; i++) {
+			codProduto[i] = scn.nextInt();
+		}
+		
+		System.out.println("Digite o nome de 5 produtos: ");
+		for (int i = 0; i < 5; i++) {
+			nomeProduto[i] = scn.next() + scn.nextLine();
+		}
+		
+		System.out.println("Digite o valor de 5 produto: ");		
+		for (int i = 0; i < 5; i++) {
+			for (int j = 0; j < 6; j++) {
+				System.out.println("Produto " + nomeProduto[i] + " valor da loja" + nomeLoja[j]);
+				m[i][j] = scn.nextFloat();
+				
+				if (j == 0) {
+					menorPreco[i] = m[i][j];
+					menorLoja[i] = nomeLoja[j];
+				} else {
+					if (m[i][j] < menorPreco[i]) {
+						menorPreco[i] = m[i][j];
+						menorLoja[i] = nomeLoja[j];
+					}
+				}
+			}
+		}
+		
+		
+		for (int i = 0; i < 5; i++) {
+			for (int j = 0; j < 6; j++) {
+				System.out.println("Para o produto " + descricaoProdutos[i] + " qual é o valor na loja " + lojas[j]);
+				precos[i][j] = entrada.nextDouble();
+				
+				
+		
+		System.out.println("Digite o nome de 6 lojas: ");
+		for (int i = 0; i < 6; i++) {
+			nomeLoja[i] = scn.next() + scn.nextLine();
+		}
+		
+		System.out.println("Valor de todos os Produtos: ");
+		
+		for (int i = 0; i < 5; i++) {
+			for (int j = 0; j <6; j++) {
+				System.out.println("\t" + m[i][j]);
+			}
+			System.out.println(" ");
+		}
+		
+		scn.close();
+	}
+		
+}
